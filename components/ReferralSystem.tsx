@@ -10,9 +10,12 @@ interface ReferralSystemProps {
 const ReferralSystem: React.FC<ReferralSystemProps> = ({ initData, userId, startParam }) => {
   const [referrals, setReferrals] = useState<string[]>([])
   const [referrer, setReferrer] = useState<string | null>(null)
-  const INVITE_URL = "https://t.me/referral_showcase_bot/start"
+    const [win, setwin] = useState<string>(''); // Set initial state to null
+  const INVITE_URL = "https://t.me/referral_showcase_bot/start";
 
   useEffect(() => {
+    setwin(window.location.href);
+
     const checkReferral = async () => {
       if (startParam && userId) {
         try {
@@ -65,6 +68,12 @@ const ReferralSystem: React.FC<ReferralSystemProps> = ({ initData, userId, start
       {referrer && (
         <p className="text-green-500 mb-4">You were referred by user {referrer}</p>
       )}
+
+      <>
+      <div>wiiiiiin</div>
+      <div>{win}</div>
+      <div>wiiiiiin</div>
+      </>
       <div className="flex flex-col space-y-4">
         <button
           onClick={handleInviteFriend}

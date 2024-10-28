@@ -70,9 +70,9 @@ const ReferralSystem: React.FC<ReferralSystemProps> = ({ initData, userId, start
       )}
 
       <>
-      <div>wiiiiiin</div>
-      <div>{win}</div>
-      <div>wiiiiiin</div>
+      <div className="text-green-500 mb-4">wiiiiiin</div>
+      <div className="text-green-500 mb-4">{win}</div>
+      <div className="text-green-500 mb-4">wiiiiiin</div>
       </>
       <div className="flex flex-col space-y-4">
         <button

@@ -11,7 +11,7 @@ const ReferralSystem: React.FC<ReferralSystemProps> = ({ initData, userId, start
   const [referrals, setReferrals] = useState<string[]>([])
   const [referrer, setReferrer] = useState<string | null>(null)
     const [win, setwin] = useState<string>(''); // Set initial state to null
-  const INVITE_URL = "https://t.me/referral_showcase_bot/start";
+  const INVITE_URL = "https://t.me/click_game_test_bot/catcatbubb/start";
 
   useEffect(() => {
     setwin(window.location.href);
